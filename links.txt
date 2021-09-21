@@ -1,0 +1,30 @@
+https://github.com/openai/gym
+https://github.com/1nF0rmed/ReinforcementLearning101/tree/master/assignment1
+https://docs.google.com/document/d/14Bz1iw_GLH138Rld-QYh94RfFaSiyxuArPpeURyjHCA/edit
+
+transfer learning and reinforcement learning
+neural networks
+deeplizard youtube
+pradumna 844 vaishanavi 033
+
+# you can write to stdout for debugging purposes, e.g.
+# print("this is a debug message")
+
+def solution(N, A, B):
+
+    vertices = {}
+
+    for x, y in zip(A, B):
+        if x not in vertices:
+            vertices[x] = 0
+        if y not in vertices:
+            vertices[y] = 0
+        vertices[x] += 1
+        vertices[y] += 1
+    
+    total = 0
+    for n in sorted(vertices.values(), reverse=True):
+        total += (N * n)
+        N -= 1
+    
+    return total
