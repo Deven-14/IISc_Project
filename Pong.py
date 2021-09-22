@@ -9,7 +9,7 @@ from tensorflow.keras.optimizers import Adam
 
 def build_model(learning_rate, input_shape, action_size):
     model = Sequential()
-    print(input_shape)
+    
     model.add(Conv2D(32, kernel_size=(3, 3), input_shape=input_shape, activation='relu'))
     model.add(MaxPooling2D(pool_size=(2, 2)))
     model.add(Conv2D(32, kernel_size=(3, 3), activation='relu'))
